@@ -8,12 +8,11 @@ public class IntList {
         first = f;
         rest = r;
     }
+    public IntList() {}
 
     /** Return the size of the list using... recursion! */
     public int size() {
-        if (rest == null) {
-            return 1;
-        }
+        if (rest == null)   return 1;
         return 1 + this.rest.size();
     }
 
@@ -30,9 +29,7 @@ public class IntList {
 
     /** Returns the ith item of this IntList. */
     public int get(int i) {
-        if (i == 0) {
-            return first;
-        }
+        if (i == 0) return this.first;
         return rest.get(i - 1);
     }
 
